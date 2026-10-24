@@ -1,0 +1,43 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "TestCorp API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.testcorp.local/v1"
+    }
+  ],
+  "paths": {
+    "/users": {
+      "get": {
+        "summary": "List users"
+      }
+    },
+    "/auth/login": {
+      "post": {
+        "summary": "Login"
+      }
+    },
+    "/admin/users": {
+      "get": {
+        "summary": "Admin: List users",
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  }
+}

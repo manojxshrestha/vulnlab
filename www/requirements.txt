@@ -1,0 +1,2 @@
+# requirements.txt
+# Test file for high-value path detection

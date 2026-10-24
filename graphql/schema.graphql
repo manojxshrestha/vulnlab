@@ -1,0 +1,1 @@
+type Query { users: [User!]! user(id: ID!): User } type User { id: ID! email: String! apiKey: String secretToken: String roles: [String!]! }
